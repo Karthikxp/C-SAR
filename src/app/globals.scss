@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@font-face {
+  font-family: "AndersonGrotesk";
+  src: url("/AndersonGrotesk-Black.otf") format("opentype");
+  font-weight: 900; // Adjust based on the font weight you want
+  font-style: normal; // Adjust for italic, etc. if needed
+}
+
+body {
+  font-family: "Nunito", system-ui;
+}
+
+h1 {
+  font-family: "AndersonGrotesk";
+}
+
+main {
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+  z-index: 0; /* Set z-index of main to ensure pseudo-element is behind content */
+  min-height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/bgclear.png");
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1;
+  }
+}
+
+.link {
+  font-family:  "Inter";
+
+  // &:hover {
+  //   text-decoration: underline;
+  // }
+}
+
+.active {
+  // color: #006fee;
+  // text-decoration: underline;
+  font-weight: 900;
+  font-family:  "Inter";
+}
+
+.icon {
+  // width: 40px;
+  color: black;
+}
+
+.cs-colorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1 {
+      margin-top: 30px;
+      font-size: 50px;
+      
+    }
+
+  .cs-blurbg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    backdrop-filter: blur(10px);
+    width: 1000px;
+    padding: 50px;
+    // padding-top: 0;
+    border-radius: 20px;
+    margin-top: 50px;
+
+    
+
+    .cs-imagecontainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 100px;
+      margin: 0;
+
+      img {
+        width: 300px;
+        border-radius: 15px;
+      }
+
+      .arrow {
+        width: 100px;
+        margin: 0 0;
+      }
+    }
+
+    form {
+      width: 500px;
+
+      button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.cs-aboutcontainer {
+  margin: 80px;
+  margin-top: 40px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 100px;
+  padding-bottom: 60px;
+  text-align: justify;
+  background: transparent;
+  backdrop-filter: blur(100px);
+  border-radius: 25px;
+  overflow: hidden;
+
+  h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .cs-aboutimagecont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin: 0 50px;
+      width: 250px;
+      border-radius: 15px;
+    }
+
+    .arrow {
+      width: 100px;
+      margin: 0 0;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  strong {
+    font-size: 20px;
+  }
+}
+
+.cs-navbar {
+  // background: linear-gradient(90deg, #757f9a80, #d7dde880
+  background: transparent;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// main {
+//   background: linear-gradient(90deg, #757f9a, #d7dde8);
+// }
+
+footer {
+  border-top: 2px solid gray;
+  height: 200px;
+  width: 100vw;
+  background: linear-gradient(90deg, #2c7453, #848890);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+  padding: 25px;
+}
+
+ul {
+  list-style-type: disc; // Ensures bullets show
+  padding-left: 20px; // Adds space for bullets
+
+  li {
+    display: inline; // Makes items display horizontally
+    margin-right: 15px; // Adds spacing between items
+  }
+}
+
+.about {
+  padding-bottom: 80px;
+}
