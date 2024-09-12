@@ -60,13 +60,17 @@ main {
   color: black;
 }
 
+.cs-colorizationcontainer {
+  padding: 50px;
+}
+
 .cs-colorization {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 50px;
   h1 {
-    margin-top: 30px;
     font-size: 50px;
   }
 
@@ -81,7 +85,7 @@ main {
     padding: 50px;
     // padding-top: 0;
     border-radius: 20px;
-    margin-top: 50px;
+    // margin-top: 50px;
 
     .cs-imagecontainer {
       display: flex;

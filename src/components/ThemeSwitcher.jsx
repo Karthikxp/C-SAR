@@ -13,8 +13,6 @@ export default function ThemeSwitcher({ isSelected, onValueChange }) {
       endContent={<MoonIcon />}
       isSelected={isSelected}
       onValueChange={onValueChange}
-    >
-      {/* {isSelected ? 'Light mode' : 'Dark mode'} */}
-    </Switch>
+    />
   );
 }
