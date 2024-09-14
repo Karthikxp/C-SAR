@@ -12,31 +12,32 @@ function App() {
   const [imageSrc, setImageSrc] = useState("");
   const [imageFile, setImageFile] = useState(null);
   const router = useRouter();
-  async function submitImageClient(e) {
+async function submitImageClient() {
+  try {
+    const data = new FormData();
+    data.append("file", imageFile);
 
-    try {
-      const data = new FormData();
-      data.append("file", imageFile);
-      console.log(data)
-      console.log(imageFile)
-      const response = await axios.post(
-        "http://192.168.127.240:5000/predict",
-        data,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+    const response = await axios.post(
+      "http://192.168.127.240:5000/predict",
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        timeout: 10000, // 10 seconds timeout
+      }
+    );
 
-      const { image_url } = response.data;
-
-      const generatedImageUrl = `http://192.168.127.240:5000${image_url}`;
-      router.push(`/result?imageurl=${generatedImageUrl}`);
-    } catch (error) {
-      router.push("/result?imageurl=error");
+    const { image_url } = response.data;
+    const generatedImageUrl = `http://192.168.127.240:5000${image_url}`;
+    router.push(`/result?imageurl=${generatedImageUrl}`);
+  } catch (error) {
+    if (error.code === "ECONNABORTED") {
+      console.error("Request timed out");
     }
+    router.push("/result?imageurl=error");
   }
+}
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
