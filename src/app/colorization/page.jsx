@@ -24,7 +24,7 @@ async function submitImageClient() {
         headers: {
           "Content-Type": "multipart/form-data",
         },
-        timeout: 10000, // 10 seconds timeout
+        timeout: 5000, // 10 seconds timeout
       }
     );
 
