@@ -15,7 +15,7 @@ function Result() {
             <h1>Result</h1>
 
             {/* <img src={image} alt="" /> */}
-            <img src="/output.png" alt="" />
+            <img src="/output.jpeg" alt="" />
             <a href={image} download="result.jpg">
               <Button color="success">Download Image</Button>
             </a>
