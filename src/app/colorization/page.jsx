@@ -24,7 +24,8 @@ async function submitImageClient() {
         headers: {
           "Content-Type": "multipart/form-data",
         },
-        timeout: 5000, // 10 seconds timeout
+        // timeout: 5000,
+        timeout: 100,
       }
     );
 
@@ -37,7 +38,9 @@ async function submitImageClient() {
       console.error("Request timed out");
     }
     // router.push("/result?imageurl=error");
-    router.push("/result");
+    setTimeout(() => {
+      router.push("/result");
+    }, 5000);
   }
 }
 
