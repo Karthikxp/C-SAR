@@ -31,11 +31,13 @@ async function submitImageClient() {
     const { image_url } = response.data;
     const generatedImageUrl = `http://192.168.127.240:5000${image_url}`;
     router.push(`/result?imageurl=${generatedImageUrl}`);
+    
   } catch (error) {
     if (error.code === "ECONNABORTED") {
       console.error("Request timed out");
     }
-    router.push("/result?imageurl=error");
+    // router.push("/result?imageurl=error");
+    router.push("/result");
   }
 }
 
