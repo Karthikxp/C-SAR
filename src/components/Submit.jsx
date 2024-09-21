@@ -7,7 +7,7 @@ function Submit() {
   return (
     <div  className="mt-[14px]">
     <Button type="submit" color="primary" isDisabled={pending} className={pending ? 'cursor-wait' : ''}>
-      {pending ? "Uploading..." : "Upload"}
+      {pending ? "Colorizing..." : "Upload"}
       </Button>
     </div>
   );

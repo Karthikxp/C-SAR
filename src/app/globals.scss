@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @font-face {
   font-family: "AndersonGrotesk";
-  src: url("/AndersonGrotesk-Black.otf") format("opentype");
+  src: url("/fonts/AndersonGrotesk-Black.otf") format("opentype");
   font-weight: 900; // Adjust based on the font weight you want
   font-style: normal; // Adjust for italic, etc. if needed
 }
@@ -255,6 +255,7 @@ form {
   }
 }
 
+//make the list elements have bullets
 .cs-applications-list {
   list-style-type: disc;
   margin-left: 20px;
