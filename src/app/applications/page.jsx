@@ -15,7 +15,7 @@ function Applications() {
             clearly. The various applications of colorized SAR images are as
             follows:
           </p>
-          <ul>
+          <ul className="cs-applications-list">
             <li>
               <b>Weather Surveillance</b>
             </li>
