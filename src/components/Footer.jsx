@@ -4,16 +4,16 @@ function Footer() {
   return (
     <footer>
       <h5>Creators</h5>
-      <div>
+      <div className="cs-footercontainer">
         <ul>
-          <li>Arunima</li>
-          <li>Kartheesan</li>
-          <li>Kailash</li>
-          <li>Karthik</li>
-          <li>Madhav </li>
-          <li>Murali</li>
+          <li><b>Arunima</b></li>
+          <li><b>Kartheesan</b></li>
+          <li><b>Kailash</b></li>
+          <li><b>Karthik</b></li>
+          <li><b>Madhav </b></li>
+          <li><b>Murali</b></li>
         </ul>
-        Made with ❤️ by V16
+        <p>Made with ❤️ by <b>V16</b></p>
       </div>
     </footer>
   );

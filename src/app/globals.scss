@@ -191,13 +191,15 @@ footer {
   padding: 25px;
 }
 
-ul {
-  list-style-type: disc; // Ensures bullets show
-  padding-left: 20px; // Adds space for bullets
+.cs-footercontainer {
+  ul {
+    list-style-type: disc; // Ensures bullets show
+    padding-left: 20px; // Adds space for bullets
 
-  li {
-    display: inline; // Makes items display horizontally
-    margin-right: 15px; // Adds spacing between items
+    li {
+      display: inline; // Makes items display horizontally
+      margin-right: 15px; // Adds spacing between items
+    }
   }
 }
 
@@ -242,7 +244,6 @@ form {
   border-radius: 20px;
   padding: 30px;
   background: transparent;
-
 
   h1 {
     font-size: 50px;

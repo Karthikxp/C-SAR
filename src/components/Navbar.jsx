@@ -38,10 +38,10 @@ export default function Navibar({ light, setTheme }) {
         </NavbarItem>
         <NavbarItem>
           <Link
-            className={pathname === "/plans" ? "active link" : "link"}
-            href="/plans"
+            className={pathname === "/applications" ? "active link" : "link"}
+            href="/applications"
           >
-            Future Prospects
+            Applications
           </Link>
         </NavbarItem>
         <NavbarItem>

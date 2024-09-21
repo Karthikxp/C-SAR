@@ -1,10 +1,21 @@
 {
   "compilerOptions": {
-    "baseUrl": ".", // Set base to project root
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"] // Alias to the src folder
-    }
+      "@/*": ["./src/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
-  "include": ["src/**/*"], // Include all files in src
-  "exclude": ["node_modules", ".next"] // Exclude build directories
+  "include": ["src/**/*", "**/*.js", "**/*.jsx"],
+  "exclude": ["node_modules", ".next"]
 }
