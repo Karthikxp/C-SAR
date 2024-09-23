@@ -14,14 +14,13 @@ function Result() {
           <>
             <h1>Result</h1>
 
-            {/* <img src={image} alt="" /> */}
-            <img src="/output.jpeg" alt="" />
+            <img src={image} alt="" />
             <a href={image} download="result.jpg">
               <Button color="success">Download Image</Button>
             </a>
           </>
         ) : (
-          <h1>{"Cannot Reach Server :("}</h1>
+          <h1>{"Cannot Reach our ML Model :("}</h1>
         )}
       </div>
     </>

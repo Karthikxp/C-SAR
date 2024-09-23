@@ -17,26 +17,22 @@ async function submitImageClient() {
     const data = new FormData();
     data.append("file", imageFile);
 
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(5000);
-    router.push("/result");
 
+    const response = await axios.post(
+      "http://192.168.127.240:5000/predict",
+      data,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        // timeout: 5000,
+        timeout: 100,
+      }
+    );
 
-    // const response = await axios.post(
-    //   "http://192.168.127.240:5000/predict",
-    //   data,
-    //   {
-    //     headers: {
-    //       "Content-Type": "multipart/form-data",
-    //     },
-    //     // timeout: 5000,
-    //     timeout: 100,
-    //   }
-    // );
-
-    // const { image_url } = response.data;
-    // const generatedImageUrl = `http://192.168.127.240:5000${image_url}`;
-    // router.push(`/result?imageurl=${generatedImageUrl}`);
+    const { image_url } = response.data;
+    const generatedImageUrl = `http://192.168.127.240:5000${image_url}`;
+    router.push(`/result?imageurl=${generatedImageUrl}`);
     
   } catch (error) {
     router.push("/result?imageurl=error");
