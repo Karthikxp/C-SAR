@@ -24,6 +24,21 @@ function App() {
             <img src="/arrow.svg" alt="" className="arrow" />
             <img src="/colorized.jpg" alt="" />
           </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NGK6YKE2O3c?si=SnsC5aLDCEdpIEPJ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style={{
+              display: 'block',
+              margin: '0 auto',
+              borderRadius: '12px',
+            }}
+          ></iframe>
           <h2>Purpose?</h2>
           <p>
             Colorization of SAR images has a wide range of applications,
