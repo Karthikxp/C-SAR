@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Here’s a solid README format for your C-SAR (SAR Analytics & Colorization Website) project:
 
-## Getting Started
+⸻
 
-First, run the development server:
+C-SAR: SAR Image Analytics & Colorization 🚀
 
-```bash
+Overview
+
+C-SAR is a web application designed to denoise and colorize SAR (Synthetic Aperture Radar) images using deep learning. The platform integrates CNN-based models for image enhancement, reducing grainy noise and improving interpretability for researchers and analysts.
+
+Features
+
+✅ Denoising Autoencoder (DAE) – Reduces speckle noise in SAR images
+✅ CNN-Based Colorization – Converts grayscale SAR images into realistic colorized versions
+✅ Interactive Web Interface – Built using Next.js & Tailwind CSS
+✅ Fast Processing Backend – Uses Flask & TensorFlow for model inference
+✅ Optimized Performance – Reduced load times & improved UI responsiveness
+
+Tech Stack
+	•	Frontend: Next.js, Tailwind CSS
+	•	Backend: Flask, TensorFlow, OpenCV
+	•	Machine Learning: Denoising Autoencoders, CNN-based Colorization
+	•	Deployment: Docker, Firebase
+
+Installation
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/your-username/csar.git
+cd csar
+
+2️⃣ Install Dependencies
+
+Frontend (Next.js)
+
+cd frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Backend (Flask)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+cd backend
+pip install -r requirements.txt
+python app.py
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3️⃣ Access the Web App
 
-## Learn More
+Go to http://localhost:3000 to use C-SAR.
 
-To learn more about Next.js, take a look at the following resources:
+Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1️⃣ Upload a grayscale SAR image
+2️⃣ The DAE model denoises the image
+3️⃣ CNN model applies colorization
+4️⃣ Download the enhanced image
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributing
 
-## Deploy on Vercel
+Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to improve.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
+
+⸻
+
+Let me know if you need any tweaks! 🚀
